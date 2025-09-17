@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/lucasventura01/grupo8--PIP2/issues"
   },
-  "homepage": "https://github.com/lucasventura01/grupo8--PIP2#readme"
+  "homepage": "https://github.com/lucasventura01/grupo8--PIP2#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
