@@ -1,25 +1,25 @@
 const dataPerfumes = require("../localData");
 
-
 const productosController = {
-    listado: function (req, res) {
-        return res.render("index");
-    },
-    detalle: function (req, res) {
-        const productoEj = dataPerfumes.productos[0];
-        return res.render("product", { producto: productoEj });
-    },
-    agregar: function (req, res) {
-        return res.render("product_add");
-    },
-    editar: function (req, res) {
-        return res.render("product_edit");
-    },
-    buscar: function (req, res) {
-        return res.render("search_results");
-    }
+  listado: function (req, res) {
+    res.render("index", { productos: dataPerfumes.productos });
+  },
+  detalle: function (req, res) {
+    const id = req.params.idProducto;            
+    const producto = dataPerfumes.productos[id];
+    res.render("product", { producto, idProducto: id });
+  },
+  agregar: function (req, res) {
+    res.render("product-add");     
+  },
+  editar: function (req, res) {
+    const id = req.params.idProducto;               
+    const producto = dataPerfumes.productos[id];
+    res.render("product-edit", { producto, idProducto: id }); 
+  },
+  buscar: function (req, res) {
+    res.render("search-results");
+  }
 };
 
 module.exports = productosController;
-
-
