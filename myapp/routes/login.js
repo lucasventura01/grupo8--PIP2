@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const loginController = require('../controllers/log_regController.js');
 
-/* GET home page. */
-router.get('/main', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get("/", loginController.login);
+
 
 module.exports = router;

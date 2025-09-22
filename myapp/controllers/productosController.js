@@ -1,18 +1,25 @@
-let productosController = {
-    listado: function() {},
-    crear: function() {},
-    editar: function() {},
-    detalle: function(req,res) {
-        res.send("Bienvenidos al detalle del producto " + req.params.idProducto);
-    },
-    detalleComentarios: function(req,res) {
-        if (req.params.idComentario == undefined) {
-            res.send("Bienvenidos a los comentarios del producto " + req.params.idProducto);
-        } else {
-            res.send("Bienvenidos a los comentarios del producto " + req.params.idProducto + " y estas enfocado en el comentario " + req.params.idComentario);
-        }
-    },
+const dataPerfumes = require("../localData");
 
+
+const productosController = {
+    listado: function (req, res) {
+        return res.render("index");
+    },
+    detalle: function (req, res) {
+        const productoEj = dataPerfumes.productos[0];
+        return res.render("product", { producto: productoEj });
+    },
+    agregar: function (req, res) {
+        return res.render("product_add");
+    },
+    editar: function (req, res) {
+        return res.render("product_edit");
+    },
+    buscar: function (req, res) {
+        return res.render("search_results");
+    }
 };
 
 module.exports = productosController;
+
+

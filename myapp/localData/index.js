@@ -1,106 +1,106 @@
 const dataPerfumes = {
     usuario: {
-        email: "claudioPaz@gmail.com.ar",
-        username: "ClaudioPaz",
-        password: "claudio123"
+        email: "mateo@ejemplo.com.ar",
+        username: "mateo",
+        password: "mateo123"
     },
     productos: [
         {
-            imagen: "./images/1006634.webp",
-            nombre: "Jean Paul Gaultier Le Male Elixir",
-            descripcion: "La Nariz detrás de esta fragrancia es Quentin Bisch. Las Notas de Salida son lavanda y menta; las Notas de Corazón son vainilla y benjuí; las Notas de Fondo son miel, haba tonka y tabaco.",
+            imagen: "invictus_victory_elixir.jpg",
+            nombre: "Invictus Victory Elixir",
+            descripcion: "Una fragancia dulce, con vainilla y ámbar especiado. Ideal para la noche.",
             comentarios: [
-                { usuario: "Juan", comentario: "Me encanta este perfume, es perfecta para la pelopincho." },
-                { usuario: "Esteban", comentario: "El perfume más rico de mi novio." },
-                { usuario: "Carlos", comentario: "Duración increíble, me lo puse hace tres días y lo sigo oliendo, ya me cansé." }
+                { usuario: "Juan", comentario: "Me encanta este perfume, es perfecta para el boliche." },
+                { usuario: "Sofia", comentario: "El perfume más rico de mi novio." },
+                { usuario: "Carlos", comentario: "Duración increíble, me lo puse hace tres días y lo sigo oliendo en mi buzo." }
             ]
         },
         {
-            imagen: "./images/o.15558.jpg",
-            nombre: "Jean Paul Gaultier Le Male Gladiator",
-            descripcion: "La Nota de Salida es menta; las Notas de Corazón son lavanda y menta; las Notas de Fondo son vainilla, haba tonka y ámbar.",
+            imagen: "bleu_de_chanel.jpg",
+            nombre: "Bleu de Chanel",
+            descripcion: "Una fragancia fresca y amaderada, perfecta para cualquier ocasión.",
             comentarios: [
                 { usuario: "Ana", comentario: "Un clásico que nunca falla." },
-                { usuario: "Luis", comentario: "Me siento Beckham cada vez que lo uso." },
-                { usuario: "Esteban", comentario: "Ideal para sesión de squash." }
+                { usuario: "Luis", comentario: "Me siento elegante cada vez que lo uso." },
+                { usuario: "Esteban", comentario: "Ideal para la oficina." }
             ]
         },
         {
-            imagen: "./images/posiongirl.avif",
-            nombre: "Dior Poison Girl",
-            descripcion: "La Nariz detrás de esta fragrancia es François Demachy. Las Notas de Salida son naranja amarga y limón (lima ácida); las Notas de Corazón son rosa de Damasco, rosa de Grasse y flor de azahar del naranjo; las Notas de Fondo son vainilla, almendra, haba tonka, bálsamo de Tolú, sándalo, cachemira y heliotropo.",
+            imagen: "JPG_lemale_elixir_a.jpg",
+            nombre: "Jean Paul Gaultier Le Male Elixir Absolu",
+            descripcion: "Una fragancia intensa y seductora, con notas de canela y vainilla.",
             comentarios: [
-                { usuario: "Marta", comentario: "Mi perro no puede dejar de usarlo." },
-                { usuario: "Diego", comentario: "Perfecto para elecciones presidenciales." },
+                { usuario: "Marta", comentario: "Mi esposo no puede dejar de usarlo." },
+                { usuario: "Diego", comentario: "Perfecto para citas nocturnas." },
                 { usuario: "Lucia", comentario: "Un aroma que enamora." }
             ]
         },
         {
-            imagen: "./images/clubdenuit.png",
-            nombre: "Armaf Club de Nuit Intense",
-            descripcion: "Las Notas de Salida son limón (lima ácida), piña, bergamota, grosellas negras y manzana; las Notas de Corazón son abedul, jazmín y rosa; las Notas de Fondo son almizcle, ámbar gris, pachulí y vainilla.",
+            imagen: "dior_sauvage.jpg",
+            nombre: "Dior Sauvage",
+            descripcion: "Una fragancia fresca y especiada, con notas de bergamota y pimienta.",
             comentarios: [
                 { usuario: "Pedro", comentario: "Lo usa todo el mundo, ya no me gusta." },
-                { usuario: "Clara", comentario: "El perfume favorito de mostaza Merlo." },
-                { usuario: "Javier", comentario: "Ideal para viajecito a mendoza en agosto." }
+                { usuario: "Clara", comentario: "El perfume favorito de mi hermano." },
+                { usuario: "Javier", comentario: "Ideal para el día a día." }
             ]
         },
         {
-            imagen: "./images/boss.webp",
-            nombre: "Hugo Boss The Scent",
-            descripcion: "Las Notas de Salida son jengibre, mandarina y bergamota; las Notas de Corazón son maninka y lavanda; las Notas de Fondo son cuero y notas amaderadas.",
+            imagen: "acqua_di_gio_profumo.jpg",
+            nombre: "Acqua di Gio Profumo",
+            descripcion: "Una fragancia acuática y amaderada, con notas de incienso y pachulí.",
             comentarios: [
-                { usuario: "Santiago", comentario: "Me transporta a Avellaneda cada vez que lo uso." },
-                { usuario: "Valentina", comentario: "El perfume favorito de mi primo Manu." },
-                { usuario: "Andrés", comentario: "Perfecto para bailar bachata." }
+                { usuario: "Santiago", comentario: "Me transporta al mar cada vez que lo uso." },
+                { usuario: "Valentina", comentario: "El perfume favorito de mi papá." },
+                { usuario: "Andrés", comentario: "Perfecto para el verano." }
             ]
         },
         {
-            imagen: "./images/cuba.webp",
-            nombre: "Cuba Paris Prestige",
-            descripcion: "Las Notas de Salida son grosellas negras, bergamota, limón (lima ácida) y toronja (pomelo); las Notas de Corazón son lavanda, cardamomo, jazmín y romero; las Notas de Fondo son ámbar, cedro, ládano, musgo de roble y vetiver.",
+            imagen: "YSL_libre_intense.jpg",
+            nombre: "Yves Saint Laurent Libre Intense",
+            descripcion: "Una fragancia floral y oriental, con notas de lavanda y vainilla.",
             comentarios: [
-                { usuario: "Isabella", comentario: "Mi perfume favorito, me siento la mona Giménez." },
-                { usuario: "Fernando", comentario: "Es el favorito de los croatas." },
-                { usuario: "Camila", comentario: "Más fuerte que mermelada de ajo." }
+                { usuario: "Isabella", comentario: "Mi perfume favorito, me siento poderosa." },
+                { usuario: "Fernando", comentario: "Es el favorito de mi mujer." },
+                { usuario: "Camila", comentario: "Elegante y sofisticado." }
             ]
         },
         {
-            imagen: "./images/samsara.jpg",
-            nombre: "Samsara guerlain",
-            descripcion: "La Nariz detrás de esta fragrancia es Jean-Paul Guerlain. Las Notas de Salida son ylang-ylang, durazno (melocotón), bergamota, notas verdes y limón (lima ácida); las Notas de Corazón son iris, jazmín, narciso, raíz de lirio, violeta y rosa; las Notas de Fondo son sándalo, vainilla, iris, ámbar, haba tonka y almizcle.",
+            imagen: "tom_ford_ombre_leather.jpg",
+            nombre: "Tom Ford Ombre Leather",
+            descripcion: "Un perfume intenso y masculino, con notas de cuero y jazmín.",
             comentarios: [
                 { usuario: "Ricardo", comentario: "Un aroma único, me encanta." },
-                { usuario: "Natalia", comentario: "El perfume favorito de la novia de mi esposo." },
-                { usuario: "Gonzalo", comentario: "Buenísimo, lo uso para publicitar sitios de apuestas." }
+                { usuario: "Natalia", comentario: "El perfume favorito de mi esposo." },
+                { usuario: "Gonzalo", comentario: "Perfecto para ocasiones especiales." }
             ]
         },
         {
-            imagen: "./images/diesel.jpeg",
-            nombre: "Diesel by Diesel",
-            descripcion: "Las Notas de Salida son jengibre y bergamota; las Notas de Corazón son lavanda y flor del algodonero; las Notas de Fondo son vainilla y Amberwood.",
+            imagen: "valentino_BIR_intense.jpg",
+            nombre: "Valentino Uomo Born in Roma Intense",
+            descripcion: "Una fragancia con notas de vainilla y lavanda.",
             comentarios: [
-                { usuario: "Lorena", comentario: "Mi novio huele a nafta con este perfume." },
-                { usuario: "Matías", comentario: "Ideal para hacer arrancar el auto." },
+                { usuario: "Lorena", comentario: "Mi novio huele increíble con este perfume." },
+                { usuario: "Matías", comentario: "Ideal para planes nocturnos." },
                 { usuario: "Julieta", comentario: "Un aroma que no pasa desapercibido." }
             ]
         },
         {
-            imagen: "./images/one.jpeg",
-            nombre: "Calvin Klein One",
-            descripcion: "ULas Notas de Salida son limón (lima ácida), notas verdes, bergamota, mandarina, piña, cardamomo y papaya; las Notas de Corazón son lirio de los valles (muguete), jazmín, violeta, rosa, nuez moscada, fresia y raíz de lirio; las Notas de Fondo son acordes verdes, almizcle, cedro, té verde, sándalo, musgo de roble y ámbar.",
+            imagen: "miss_dior.jpg",
+            nombre: "Miss Dior",
+            descripcion: "Una fragancia floral y frutal, con notas de rosa y durazno.",
             comentarios: [
-                { usuario: "Sofía", comentario: "La fragancia de mi tiastro." },
-                { usuario: "Alejandro", comentario: "El favorito de mis amigos." },
-                { usuario: "Mariana", comentario: "No me gustó para nada." }
+                { usuario: "Sofía", comentario: "La fragancia de las chicas." },
+                { usuario: "Alejandro", comentario: "El favorito de mi novia." },
+                { usuario: "Mariana", comentario: "Un aroma delicado y femenino." }
             ]
         },
         {
-            imagen: "./images/dior.jpeg",
-            nombre: "Dior Homme Intense",
-            descripcion: "La Nariz detrás de esta fragrancia es François Demachy. La Nota de Salida es lavanda; las Notas de Corazón son iris, almizcle ambreta y pera; las Notas de Fondo son cedro de Virginia y vetiver.",
+            imagen: "LV_imagination.jpg",
+            nombre: "Louis Vuitton Imagination",
+            descripcion: "Una fragancia fresca y limpia, con notas cítricas.",
             comentarios: [
-                { usuario: "Laura", comentario: "Huele a baño después de comer esparragos." },
+                { usuario: "Laura", comentario: "Huele a recién salido de la ducha." },
                 { usuario: "Carlos", comentario: "Ideal para climas cálidos." },
                 { usuario: "Elena", comentario: "Un aroma refrescante y ligero." }
             ]

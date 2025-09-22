@@ -1,12 +1,7 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
+const main = require("../controllers/mainController");
 
-router.get('/', function(req, res) {
-  res.send('Bienvenidos al sitio!!!!!');
-});
-
-router.get('/contacto', function(req, res) {
-  res.send('Dejanos tu contacto!');
-});
+router.get("/", main.index);
 
 module.exports = router;
