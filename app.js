@@ -20,8 +20,8 @@ app.use('/users', rutasUsers);
 
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'myapp', 'ejs');
+app.set('views', path.join(__dirname, 'myapp', 'views'));
+app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -49,4 +49,6 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
-app.listen(3000, () => console.log('esto fue exitoso'));
+app.listen(3000, function() {
+    console.log('esto fue exitoso')});
+
