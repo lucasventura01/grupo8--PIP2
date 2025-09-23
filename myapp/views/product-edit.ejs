@@ -11,123 +11,125 @@
 	<!-- Font Awesome Stylesheet -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 	<!-- Bootstrap Grid Stylesheet -->
-	<link rel="stylesheet" href="../public/stylesheets/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="/stylesheets/bootstrap-grid.min.css">
 	<!-- Own Stylesheet -->
-	<link rel="stylesheet" href="../public/stylesheets/app.css">
+	<link rel="stylesheet" href="/stylesheets/app.css">
 </head>
 
 <body>
 	<!-- Header -->
 	<%- include("./partials/header") %>
 
-	<!-- /Header -->
+		<!-- /Header -->
 
-	<!-- Novedades -->
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Editar datos del producto</h2>
-			</div>
-			<!-- Show the "ultimos" products -->
-			<form action="/productos/edit" method="get">
-<!-- ID del perfume a editar (simulado) -->
-				<input type="hidden" id="id" name="id" value="123" />
-			  
-				<div>
-				  <label for="nombre">Nombre del perfume</label>
-				  <input id="nombre" name="nombre" type="text" required placeholder="Ej: Bleu de Chanel" />
+		<!-- Novedades -->
+		<div class="container products-wrapper">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="products-title">Editar datos del producto</h2>
 				</div>
-			  
-				<div>
-				  <label for="marca">Marca</label>
-				  <input id="marca" name="marca" type="text" required placeholder="Ej: Chanel" />
-				</div>
-			  
-				<div>
-				  <label for="familia">Familia olfativa</label>
-				  <select id="familia" name="familia" required>
-					<option value="">Seleccioná una</option>
-					<option value="citrica">Cítrica</option>
-					<option value="floral">Floral</option>
-					<option value="ambar-oriental">Ámbar / Oriental</option>
-					<option value="amaderada">Amaderada</option>
-					<option value="aromatica">Aromática</option>
-					<option value="fougere">Fougère</option>
-					<option value="gourmand">Gourmand</option>
-					<option value="acuatica">Acuática</option>
-					<option value="chipre">Chipre</option>
-				  </select>
-				</div>
-			  
-				<div>
-				  <label for="concentracion">Concentración</label>
-				  <select id="concentracion" name="concentracion" required>
-					<option value="">Seleccioná una</option>
-					<option value="edc">Eau de Cologne (EdC)</option>
-					<option value="edt">Eau de Toilette (EdT)</option>
-					<option value="edp">Eau de Parfum (EdP)</option>
-					<option value="parfum">Parfum / Extrait</option>
-				  </select>
-				</div>
-			  
-				<div>
-				  <label for="tamano">Tamaño (ml)</label>
-				  <input id="tamano" name="tamano" type="number" min="5" step="5" required placeholder="Ej: 100" />
-				</div>
-			  
-				<div>
-				  <label for="genero">Género</label>
-				  <select id="genero" name="genero" required>
-					<option value="">Seleccioná una</option>
-					<option value="masculino">Masculino</option>
-					<option value="femenino">Femenino</option>
-					<option value="unisex">Unisex</option>
-				  </select>
-				</div>
-			  
-				<div>
-				  <label for="precio">Precio</label>
-				  <input id="precio" name="precio" type="number" step="0.01" min="0" required placeholder="Ej: 199.99" />
-				</div>
-			  
-				<div>
-				  <label for="stock">Stock</label>
-				  <input id="stock" name="stock" type="number" min="0" step="1" required placeholder="Ej: 10" />
-				</div>
-			  
-				<div>
-				  <label for="lanzamiento">Año de lanzamiento (opcional)</label>
-				  <input id="lanzamiento" name="lanzamiento" type="number" min="1900" max="2100" placeholder="Ej: 2010" />
-				</div>
-			  
-				<div>
-				  <label for="imagenUrl">Imagen (URL)</label>
-				  <input id="imagenUrl" name="imagenUrl" type="url" placeholder="https://..." />
-				</div>
-			  
-				<div>
-				  <label for="notasSalida">Notas de salida (opcional)</label>
-				  <input id="notasSalida" name="notasSalida" type="text" placeholder="Ej: limón, bergamota" />
-				</div>
-			  
-				<div>
-				  <label for="notasCorazon">Notas de corazón (opcional)</label>
-				  <input id="notasCorazon" name="notasCorazon" type="text" placeholder="Ej: jazmín, nuez moscada" />
-				</div>
-			  
-				<div>
-				  <label for="notasFondo">Notas de fondo (opcional)</label>
-				  <input id="notasFondo" name="notasFondo" type="text" placeholder="Ej: cedro, incienso" />
-				</div>
-			  
-				<button type="submit">Guardar cambios</button>
-			  </form>
+				<form action="/productos/edit" method="get">
+					<input type="hidden" id="id" name="id" value="123" />
+
+					<div>
+						<label for="nombre">Nombre del perfume</label>
+						<input id="nombre" name="nombre" type="text" required placeholder="Ej: Bleu de Chanel" />
+					</div>
+
+					<div>
+						<label for="marca">Marca</label>
+						<input id="marca" name="marca" type="text" required placeholder="Ej: Chanel" />
+					</div>
+
+					<div>
+						<label for="familia">Familia olfativa</label>
+						<select id="familia" name="familia" required>
+							<option value="">Seleccioná una</option>
+							<option value="citrica">Cítrica</option>
+							<option value="floral">Floral</option>
+							<option value="ambar-oriental">Ámbar / Oriental</option>
+							<option value="amaderada">Amaderada</option>
+							<option value="aromatica">Aromática</option>
+							<option value="fougere">Fougère</option>
+							<option value="gourmand">Gourmand</option>
+							<option value="acuatica">Acuática</option>
+							<option value="chipre">Chipre</option>
+						</select>
+					</div>
+
+					<div>
+						<label for="concentracion">Concentración</label>
+						<select id="concentracion" name="concentracion" required>
+							<option value="">Seleccioná una</option>
+							<option value="edc">Eau de Cologne (EdC)</option>
+							<option value="edt">Eau de Toilette (EdT)</option>
+							<option value="edp">Eau de Parfum (EdP)</option>
+							<option value="parfum">Parfum / Extrait</option>
+						</select>
+					</div>
+
+					<div>
+						<label for="tamano">Tamaño (ml)</label>
+						<input id="tamano" name="tamano" type="number" min="5" step="5" required
+							placeholder="Ej: 100" />
+					</div>
+
+					<div>
+						<label for="genero">Género</label>
+						<select id="genero" name="genero" required>
+							<option value="">Seleccioná una</option>
+							<option value="masculino">Masculino</option>
+							<option value="femenino">Femenino</option>
+							<option value="unisex">Unisex</option>
+						</select>
+					</div>
+
+					<div>
+						<label for="precio">Precio</label>
+						<input id="precio" name="precio" type="number" step="0.01" min="0" required
+							placeholder="Ej: 199.99" />
+					</div>
+
+					<div>
+						<label for="stock">Stock</label>
+						<input id="stock" name="stock" type="number" min="0" step="1" required placeholder="Ej: 10" />
+					</div>
+
+					<div>
+						<label for="lanzamiento">Año de lanzamiento (opcional)</label>
+						<input id="lanzamiento" name="lanzamiento" type="number" min="1900" max="2100"
+							placeholder="Ej: 2010" />
+					</div>
+
+					<div>
+						<label for="imagenUrl">Imagen (URL)</label>
+						<input id="imagenUrl" name="imagenUrl" type="url" placeholder="https://..." />
+					</div>
+
+					<div>
+						<label for="notasSalida">Notas de salida (opcional)</label>
+						<input id="notasSalida" name="notasSalida" type="text" placeholder="Ej: limón, bergamota" />
+					</div>
+
+					<div>
+						<label for="notasCorazon">Notas de corazón (opcional)</label>
+						<input id="notasCorazon" name="notasCorazon" type="text"
+							placeholder="Ej: jazmín, nuez moscada" />
+					</div>
+
+					<div>
+						<label for="notasFondo">Notas de fondo (opcional)</label>
+						<input id="notasFondo" name="notasFondo" type="text" placeholder="Ej: cedro, incienso" />
+					</div>
+
+					<button type="submit">Guardar cambios</button>
+				</form>
 
 
-	<!-- footer -->
-	<%- include("./partials/footer") %>
+				<!-- footer -->
+				<%- include("./partials/footer") %>
 
-	<!-- /footer -->
+					<!-- /footer -->
 </body>
 
 </html>

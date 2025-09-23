@@ -3,11 +3,11 @@ const dataPerfumes = {
         email: "mateo@ejemplo.com.ar",
         username: "mateo",
         password: "mateo123",
-        foto_perfil: "../public/users/profile-default.png"
+        foto_perfil: "/profile-default.png"
     },
     productos: [
         {
-            imagen: "../public/images/invictus_victory_elixir.jpg",
+            imagen: "invictus_victory_elixir.jpg",
             id: 1,
             nombre: "Invictus Victory Elixir",
             descripcion: "Una fragancia dulce, con vainilla y ámbar especiado. Ideal para la noche.",
@@ -18,7 +18,7 @@ const dataPerfumes = {
             ]
         },
         {
-            imagen: "../public/images/bleu_de_chanel.jpg",
+            imagen: "bleu_de_chanel.jpg",
             id: 2,
             nombre: "Bleu de Chanel",
             descripcion: "Una fragancia fresca y amaderada, perfecta para cualquier ocasión.",
@@ -29,7 +29,7 @@ const dataPerfumes = {
             ]
         },
         {
-            imagen: "../public/images/jean_paul_gaultier_abs.jpg",
+            imagen: "jean_paul_gaultier_abs.jpg",
             id: 3,
             nombre: "Jean Paul Gaultier Le Male Elixir Absolu",
             descripcion: "Una fragancia intensa y seductora, con notas de canela y vainilla.",
@@ -40,7 +40,7 @@ const dataPerfumes = {
             ]
         },
         {
-            imagen: "../public/images/dior_sauvage.jpg",
+            imagen: "dior_sauvage.jpg",
             id: 4,
             nombre: "Dior Sauvage",
             descripcion: "Una fragancia fresca y especiada, con notas de bergamota y pimienta.",
@@ -51,9 +51,9 @@ const dataPerfumes = {
             ]
         },
         {
-            imagen: "../public/images/acqua_di_gio_profumo.jpg",
+            imagen: "aqua_de_gio_profumo.jpg",
             id: 5,
-            nombre: "Acqua di Gio Profumo",
+            nombre: "Aqua di Gio Profumo",
             descripcion: "Una fragancia acuática y amaderada, con notas de incienso y pachulí.",
             comentarios: [
                 { usuario: "Santiago", comentario: "Me transporta al mar cada vez que lo uso." },
@@ -62,7 +62,7 @@ const dataPerfumes = {
             ]
         },
         {
-            imagen: "../public/images/ysl_libre.jpg",
+            imagen: "ysl_libre.jpg",
             id: 6,
             nombre: "Yves Saint Laurent Libre Intense",
             descripcion: "Una fragancia floral y oriental, con notas de lavanda y vainilla.",
@@ -73,7 +73,7 @@ const dataPerfumes = {
             ]
         },
         {
-            imagen: "../public/images/tom_ford_ombre_leather.jpg",
+            imagen: "tom_ford_ombre_leather.jpg",
             id: 7,
             nombre: "Tom Ford Ombre Leather",
             descripcion: "Un perfume intenso y masculino, con notas de cuero y jazmín.",
@@ -84,7 +84,7 @@ const dataPerfumes = {
             ]
         },
         {
-            imagen: "../public/images/valentino_BIR_intense.jpg",
+            imagen: "valentino_BIR_intense.jpg",
             id: 8,
             nombre: "Valentino Uomo Born in Roma Intense",
             descripcion: "Una fragancia con notas de vainilla y lavanda.",
@@ -95,7 +95,7 @@ const dataPerfumes = {
             ]
         },
         {
-            imagen: "../public/images/miss_dior.jpg",
+            imagen: "miss_dior.jpg",
             id: 9,
             nombre: "Miss Dior",
             descripcion: "Una fragancia floral y frutal, con notas de rosa y durazno.",
@@ -106,7 +106,7 @@ const dataPerfumes = {
             ]
         },
         {
-            imagen: "../public/images/LV_imagination.jpg",
+            imagen: "LV_imagination.jpg",
             id: 10,
             nombre: "Louis Vuitton Imagination",
             descripcion: "Una fragancia fresca y limpia, con notas cítricas.",
