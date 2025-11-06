@@ -3,20 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const session = require('express-session');
 var app = express();
 
 
 let rutasMain = require('./myapp/routes/main.js');
-let rutasUsers = require('./myapp/routes/users.js');
+let rutasPerfil = require('./myapp/routes/perfil.js');
 let rutasProductos = require('./myapp/routes/productos.js')
-let rutasRegistro = require('./myapp/routes/registro.js')
-let rutasLogin = require('./myapp/routes/login.js')
+let rutasUsers = require('./myapp/routes/users.js');
 
-app.use('/productos', rutasProductos);
-app.use('/registro', rutasRegistro);
-app.use('/login', rutasLogin);
-app.use('/', rutasMain);
-app.use('/users', rutasUsers);
 
 
 // view engine setup
@@ -29,6 +24,42 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'myapp', 'public')));
 app.use(express.static(path.join(__dirname, 'maquetaProg2_2025S2')));
+
+
+// middleware configuracion de session 
+app.use(session({
+  secret: "myapp",
+  resave: false,
+  saveUninitialized: true
+}))
+
+// middleware de session hacia Vistas
+app.use(function(req, res, next) {
+  if (req.session.user != undefined) { // logueado
+    res.locals.user = req.session.user;
+  }
+  return next();
+})
+
+
+// middleware de Cookies hacia Vistas
+app.use(function(req, res, next) {
+
+  console.log(req.cookies.user);
+  
+  
+  if (req.cookies.user != undefined && req.session.user == undefined) {
+    res.locals.user = req.cookies.user;   // uno lo envia a las vistas (partials)
+    req.session.user = req.cookies.user;  // otro lo vuelve a poner en session
+  }
+
+  return next();
+})
+
+app.use('/productos', rutasProductos);
+app.use('/', rutasMain);
+app.use('/users', rutasUsers);
+app.use('/perfil', rutasPerfil);
 
 
 // catch 404 and forward to error handler
