@@ -52,6 +52,9 @@ let uController = {
     },
 
     processLogin: function(req, res) {
+        if (!req.body.email || !req.body.password) {
+            return res.send("Debes completar todos los campos!");
+        }
 
 
         db.User.findOne({
