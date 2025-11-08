@@ -91,7 +91,6 @@ let uController = {
     },
 
     logout: function(req, res) {
-        //Procesamos el logout destruyendo la sesión y eliminando la cookie.
         req.session.destroy();
         res.clearCookie("user");
         res.redirect("/");
