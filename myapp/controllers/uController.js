@@ -3,52 +3,73 @@ let bcrypt = require('bcryptjs');
 
 let uController = {
     show: function(req, res) {
-        // Mostrar formulario de registro
-        if (req.session && req.session.user) {
-            return res.redirect("/");
+        if (req.session.user != undefined) {
+            return res.redirect('/');
+        } else {
+            return res.render('register');
         }
-        return res.render("register");
     },
 
     create: function(req, res) {
-        // Crear usuario nuevo - hashear contraseña
-        let userData = {
-            email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 10),
-            name: req.body.name
-        };
-
-        db.User.create(userData)
-            .then(function() {
-                return res.redirect("/");
-            })
-            .catch(function(error) {
-                return res.send(error);
-            });
+        if (req.session.user != undefined) {
+            return res.redirect("/");
+        }
+        if (!req.body.email || !req.body.password || !req.body.name) {
+            return res.send("Todos los campos son obligatorios");
+        }db.User.findOne({
+            where: { email: req.body.email }
+        })
+        .then(function(user) {
+            if (user) {
+                return res.send("El email ya está registrado");
+            } else {
+                let userData = {
+                    name: req.body.name,
+                    email: req.body.email,
+                    password: bcrypt.hashSync(req.body.password, 10)
+                };
+    
+                db.User.create(userData)
+                    .then(function() {
+                        return res.redirect("/");
+                    })
+                    .catch(function(error) {
+                        return res.send(error);
+                    });
+            }
+        })
+        .catch(function(error) {
+            return res.send(error);
+        });
     },
 
     login: function(req, res) {
-        // Mostrar formulario de login
-        if (req.session && req.session.user) {
+        if (req.session.user != undefined) {
             return res.redirect("/");
+        } else {
+            return res.render("login");
         }
-        return res.render("login");
     },
 
     processLogin: function(req, res) {
-        // Procesar login y crear sesión + cookie (opcional)
+
+
         db.User.findOne({
             where: { email: req.body.email }
         })
         .then(function(user) {
-            if (user && bcrypt.compareSync(req.body.password, user.password)) {
+            if (!user) {
+                return res.send('El email ingresado no está registrado');
+            }
+
+            if (bcrypt.compareSync(req.body.password, user.password)) {
                 req.session.user = {
                     id: user.id,
                     email: user.email,
                     name: user.name
                 };
 
-                if (req.body.recordarme) {
+                if (req.body.recordarme != undefined) {
                     res.cookie("user", {
                         id: user.id,
                         email: user.email,
@@ -58,7 +79,7 @@ let uController = {
 
                 return res.redirect("/");
             } else {
-                return res.send("Credenciales inválidas");
+                return res.send("Contraseña incorrecta");
             }
         })
         .catch(function(error) {
