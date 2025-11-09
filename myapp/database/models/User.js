@@ -8,24 +8,36 @@ module.exports = function (sequelize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        name: {
-            type: dataTypes.STRING
-        },
         email: {
             type: dataTypes.STRING
         },
-        password: {
+        contraseña: {
+            type: dataTypes.STRING
+        },
+        foto_perfil: {
+            type: dataTypes.STRING
+        },
+        createdAt: {
+            type: dataTypes.DATE
+        },
+        updatedAt: {
+            type: dataTypes.DATE
+        },
+        deletedAt: {
+            type: dataTypes.DATE
+        },
+        nombre_usuario: {
             type: dataTypes.STRING
         },
         remember_token: {
             type: dataTypes.STRING
-        },
+        }
     }
 
     let config = {
         tableName : "usuarios",
         timestamps: true,
-        underscored: true,
+        underscored: false,
     };
 
     const User = sequelize.define(alias, cols, config);

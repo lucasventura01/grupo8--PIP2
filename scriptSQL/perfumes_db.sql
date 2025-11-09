@@ -129,8 +129,11 @@ UPDATE usuarios
 SET foto_perfil = "profile-default.png"
 WHERE id > 0;
 
+ALTER TABLE usuarios
+ADD COLUMN nombre_usuario VARCHAR(100) NOT NULL;
 
-
+ALTER TABLE usuarios
+ADD COLUMN remember_token VARCHAR(500);
 
 
 

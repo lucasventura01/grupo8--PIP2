@@ -13,9 +13,9 @@ let uController = {
     create: function (req, res) {
 
         let userData = {
-            name: req.body.name,
+            nombre_usuario: req.body.name,
             email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 10)
+            contraseña: bcrypt.hashSync(req.body.password, 10)
         };
 
         db.User.create(userData)
@@ -45,18 +45,18 @@ let uController = {
                     return res.send('El email ingresado no está registrado');
                 }
 
-                if (bcrypt.compareSync(req.body.password, user.password)) {
+                if (bcrypt.compareSync(req.body.password, user.contraseña)) {
                     req.session.user = {
                         id: user.id,
                         email: user.email,
-                        name: user.name
+                        nombre_usuario: user.nombre_usuario
                     };
 
                     if (req.body.recordarme != undefined) {
                         res.cookie("user", {
                             id: user.id,
                             email: user.email,
-                            name: user.name
+                            nombre_usuario: user.nombre_usuario
                         }, { maxAge: 1000 * 60 * 10 });
                     }
 
