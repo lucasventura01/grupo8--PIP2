@@ -32,12 +32,23 @@ module.exports = function(sequelize, dataTypes){
     }
 
     let config = {
-        tablename: "products",
+        tableName: "products",
         timestamps: true,
-        underscore: true
+        underscored: false
     }
 
     const Product = sequelize.define(alias, cols, config);
 
+    Product.associate = function(models){
+        Product.belongsTo(models.User, {
+            as: "user",
+            foreignKey: "id_usuario"
+        })
+        Product.hasMany(models.Comment, {
+            as: "comment",
+            foreignKey: "id_producto"
+        })
+        
+    }
     return Product;
 }

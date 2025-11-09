@@ -1,50 +1,53 @@
 <header class="main-header">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-5 col-md-2">
-        <a href="/" class="main-header_home-link d-flex align-items-center">
-          <img src="/images/logo2.png" alt="logo" />
-        </a>
-      </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-5 col-md-2">
+                <a href="/" class="main-header_home-link d-flex align-items-center">
+                    <img src="/images/logo2.png" alt="logo" />
+                </a>
+            </div>
 
-      <div class="col-7 col-md-6">
-        <form action="/productos/search" method="GET" class="search-form">
-          <input type="text" name="search" placeholder="Buscar productos, marcas y más" class="search-form_input">
-          <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
-        </form>
-      </div>
+            <div class="col-7 col-md-6">
+                <form action="/productos/search" method="GET" class="search-form">
+                    <input type="text" name="search" placeholder="Buscar productos, marcas y más"
+                        class="search-form_input">
+                    <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
 
-      <div class="col-12 col-md-4">
-        <a class="main-header_credit-link">
-          <i class="fas fa-hand-holding-usd"></i>
-          Todas las opiniones en un solo lugar.
-        </a>
-      </div>
+            <div class="col-12 col-md-4">
+                <a class="main-header_credit-link">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    Todas las opiniones en un solo lugar.
+                </a>
+            </div>
+        </div>
+
+        <button class="btn-toggle-navbar">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="main-navbar">
+            <ul class="left-navbar">
+                <li><a href="/productos">Todos los productos</a></li>
+                <% if(locals.user !=null) { %>
+                    <li><a href="/productos/add">Cargar producto</a></li>
+                    <% } %>
+            </ul>
+
+            <ul class="right-navbar">
+                <li>
+                    <a href="/perfil" class="user-link">
+                        <i class="fas fa-user-circle"></i> Mi perfil
+                    </a>
+                </li>
+                <% if (locals.user==null){ %>
+                    <li><a class="fas fa-sign-in-alt" href="/users/login">Ingresar</a></li>
+                    <li><a class="far fa-address-card" href="/users/register">Registro</a></li>
+                    <% } else { %>
+                        <li><a href="/users/logout">Logout</a></li>
+                        <% } %>
+            </ul>
+        </nav>
     </div>
-
-    <button class="btn-toggle-navbar">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <nav class="main-navbar">
-      <ul class="left-navbar">
-        <li><a href="/productos">Todos los productos</a></li>
-        <li><a href="/productos/add">Cargar producto</a></li>
-      </ul>
-
-      <ul class="right-navbar">
-        <li>
-          <a href="/perfil" class="user-link">
-            <i class="fas fa-user-circle"></i> Mi perfil
-          </a>
-        </li>
-        <% if (locals.user == null){ %>
-        <li><a class="fas fa-sign-in-alt" href="/users/login">Ingresar</a></li>
-        <li><a class="far fa-address-card" href="/users/register">Registro</a></li>
-        <% } else { %>
-          <li><a href="/users/logout">Logout</a></li>
-        <% } %>
-      </ul>
-    </nav>
-  </div>
 </header>
