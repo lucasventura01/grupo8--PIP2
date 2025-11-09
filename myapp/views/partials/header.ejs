@@ -38,12 +38,12 @@
             <i class="fas fa-user-circle"></i> Mi perfil
           </a>
         </li>
-        <li>
-          <a href="/users/register">Creá tu cuenta <i class="far fa-address-card"></i></a>
-        </li>
-        <li>
-          <a href="/users/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
-        </li>
+        <% if (locals.user == null){ %>
+        <li><a class="fas fa-sign-in-alt" href="/users/login">Ingresar</a></li>
+        <li><a class="far fa-address-card" href="/users/register">Registro</a></li>
+        <% } else { %>
+          <li><a href="/users/logout">Logout</a></li>
+        <% } %>
       </ul>
     </nav>
   </div>
