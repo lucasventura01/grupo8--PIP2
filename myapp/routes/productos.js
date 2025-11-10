@@ -6,8 +6,6 @@ router.get('/add', prodController.agregar);
 router.post('/add', prodController.guardar);
 router.post('/:idProducto/comment', prodController.comentar);
 router.get('/edit/:idProducto', prodController.editar);
-router.get('/search', prodController.search);
-router.get('/', prodController.index);
 router.get('/:idProducto', prodController.show);
 
 
