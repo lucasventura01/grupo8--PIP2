@@ -8,7 +8,7 @@
             </div>
 
             <div class="col-7 col-md-6">
-                <form action="/productos/search" method="GET" class="search-form">
+                <form action="/search" method="GET" class="search-form">
                     <input type="text" name="search" placeholder="Buscar productos, marcas y más"
                         class="search-form_input">
                     <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
@@ -29,7 +29,7 @@
 
         <nav class="main-navbar">
             <ul class="left-navbar">
-                <li><a href="/productos">Todos los productos</a></li>
+                <li><a href="/">Todos los productos</a></li>
                 <% if(locals.user !=null) { %>
                     <li><a href="/productos/add">Cargar producto</a></li>
                     <% } %>
