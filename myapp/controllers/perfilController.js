@@ -8,7 +8,7 @@ const perfilController = {
         }
 
         db.User.findByPk(req.session.user.id, {
-            include: [{ association: "productos" }]
+            include: [{ association: "products" }]
         })
         .then(function(usuario) {
             let cantidadProductos = usuario.productos.length;
