@@ -141,4 +141,114 @@ WHERE id = 32;
 ALTER TABLE usuarios
 MODIFY email VARCHAR(500) NOT NULL UNIQUE;
 
+UPDATE usuarios
+SET nombre_usuario = "Juancruz22"
+WHERE id = 1;
 
+UPDATE usuarios
+SET nombre_usuario = "SofiSuarez"
+WHERE id = 2;
+
+UPDATE usuarios
+SET nombre_usuario = "carlitoPaz"
+WHERE id = 3;
+
+UPDATE usuarios
+SET nombre_usuario = "ariana4"
+WHERE id = 4;
+
+UPDATE usuarios
+SET nombre_usuario = "lucho09"
+WHERE id = 5;
+
+UPDATE usuarios
+SET nombre_usuario = "esteban53"
+WHERE id = 6;
+
+UPDATE usuarios
+SET nombre_usuario = "martita"
+WHERE id = 7;
+
+UPDATE usuarios
+SET nombre_usuario = "diegote10"
+WHERE id = 8;
+
+UPDATE usuarios
+SET nombre_usuario = "lucia99"
+WHERE id = 9;
+
+UPDATE usuarios
+SET nombre_usuario = "pepePerez"
+WHERE id = 10;
+
+UPDATE usuarios
+SET nombre_usuario = "Clarita"
+WHERE id = 11;
+
+UPDATE usuarios
+SET nombre_usuario = "javier24"
+WHERE id = 12;
+
+UPDATE usuarios
+SET nombre_usuario = "sant111"
+WHERE id = 13;
+
+UPDATE usuarios
+SET nombre_usuario = "valentina"
+WHERE id = 14;
+
+UPDATE usuarios
+SET nombre_usuario = "andrew"
+WHERE id = 15;
+
+UPDATE usuarios
+SET nombre_usuario = "isabella"
+WHERE id = 16;
+
+UPDATE usuarios
+SET nombre_usuario = "fernandito"
+WHERE id = 17;
+
+UPDATE usuarios
+SET nombre_usuario = "juanCamila"
+WHERE id = 18;
+
+UPDATE usuarios
+SET nombre_usuario = "ricardito"
+WHERE id = 19;
+
+UPDATE usuarios
+SET nombre_usuario = "natalia"
+WHERE id = 20;
+
+UPDATE usuarios
+SET nombre_usuario = "gonzaa95"
+WHERE id = 21;
+
+UPDATE usuarios
+SET nombre_usuario = "lorraine"
+WHERE id = 22;
+
+UPDATE usuarios
+SET nombre_usuario = "matuteBostero"
+WHERE id = 23;
+
+UPDATE usuarios
+SET nombre_usuario = "julieta"
+WHERE id = 24;
+
+UPDATE usuarios
+SET nombre_usuario = "aleSuarez"
+WHERE id = 25;
+
+UPDATE usuarios
+SET nombre_usuario = "marianita"
+WHERE id = 26;
+
+UPDATE usuarios
+SET nombre_usuario = "lauralopez"
+WHERE id = 27;
+
+UPDATE usuarios
+SET nombre_usuario = "Elena"
+WHERE id = 28;
