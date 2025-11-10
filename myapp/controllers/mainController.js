@@ -20,7 +20,8 @@ const mainController = {
         let criterio = req.query.search;
         db.Product.findAll({
             where: {
-                title: { [op.like]: `%${criterio}%` }
+                nombre_producto: { [op.like]: `%${criterio}%` },
+                include: [{ association: "user" }, { association: "comment", include: [{ association: "user" }] }]
             }
         })
             .then(function (products) {
