@@ -15,7 +15,7 @@ const perfilController = {
 
             return res.render("profile", {
                 usuario: usuario,
-                productos: usuario.productos,
+                productos: usuario.products,
                 cantidad: cantidadProductos
             });
         })
