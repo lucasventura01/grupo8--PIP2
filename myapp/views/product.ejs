@@ -8,7 +8,7 @@
 	<link width="" rel="shortcut icon" href="/images/logo2.png" />
 
 	<title>
-		<%= producto.nombre %>
+		<%= product.nombre_producto %>
 	</title>
 	<!-- Font Awesome Stylesheet -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -28,7 +28,7 @@
 		<div class="container products-wrapper">
 			<div class="d-flex align-items-center">
 				<h2 class="products-title">
-					<%= producto.nombre %>
+					<%= product.nombre_producto %>
 				</h2>
 				<p class="product-detail-description" style="margin-left:auto">
 					<a href="/productos/edit/<%= idProducto %>">Editar</a>
@@ -38,24 +38,24 @@
 			<div class="product-detail">
 				<div class="row">
 					<article class="col-12 col-lg-8 product-detail-info">
-						<img src="/images/<%= producto.imagen %>" alt="<%= producto.nombre %>"
+						<img src="/images/<%= product.nombre_archivo %>" alt="<%= product.nombre_producto %>"
 							class="product-detail-img">
 						<p class="product-detail-description">
-							<%= producto.descripcion %>
+							<%= product.descripcion_producto %>
 						</p>
 					</article>
 
 					<div class="col-12 col-lg-4">
 						<section class="comments">
-							<% for (let i=0; i < producto.comentarios.length; i++) { %>
+							<% for (let i=0; i < product.comment.length; i++) { %>
 								<article>
 									<img src="/images/users/profile-default.png" alt="">
 									<div class="data">
 										<p class="user">
 											<strong><a href="/users">
-													<%= producto.comentarios[i].usuario %>:
+													<%= product.comment[i].usuario %>:
 												</a></strong>
-											<%= producto.comentarios[i].comentario %>
+											<%= product.comment[i].comentario %>
 										</p>
 									</div>
 								</article>

@@ -135,7 +135,10 @@ ADD COLUMN nombre_usuario VARCHAR(100) NOT NULL;
 ALTER TABLE usuarios
 ADD COLUMN remember_token VARCHAR(500);
 
+DELETE FROM usuarios
+WHERE id = 32;
 
-
+ALTER TABLE usuarios
+MODIFY email VARCHAR(500) NOT NULL UNIQUE;
 
 
