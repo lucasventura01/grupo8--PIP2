@@ -37,9 +37,11 @@
 
             <ul class="right-navbar">
                 <li>
-                    <a href="/perfil" class="user-link">
-                        <i class="fas fa-user-circle"></i> Mi perfil
-                    </a>
+                    <% if (locals.user != null) { %>
+                        <a href="/users/perfil/<%= locals.user.id %>" class="user-link">
+                            <i class="fas fa-user-circle"></i> Mi perfil
+                        </a>
+                    <% } %>
                 </li>
                 <% if (locals.user==null){ %>
                     <li><a class="fas fa-sign-in-alt" href="/users/login">Ingresar</a></li>

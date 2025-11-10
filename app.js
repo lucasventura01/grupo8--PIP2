@@ -8,7 +8,6 @@ var app = express();
 
 
 let rutasMain = require('./myapp/routes/main.js');
-let rutasPerfil = require('./myapp/routes/perfil.js');
 let rutasProductos = require('./myapp/routes/productos.js')
 let rutasUsers = require('./myapp/routes/users.js');
 
@@ -59,7 +58,6 @@ app.use(function(req, res, next) {
 app.use('/productos', rutasProductos);
 app.use('/', rutasMain);
 app.use('/users', rutasUsers);
-app.use('/perfil', rutasPerfil);
 
 
 // catch 404 and forward to error handler

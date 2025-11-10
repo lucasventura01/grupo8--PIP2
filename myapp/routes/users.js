@@ -10,4 +10,7 @@ router.get('/login', usersController.login);           // Form login
 router.post('/processLogin', usersController.processLogin); // Procesa login
 router.get('/logout', usersController.logout);
 router.post('/logout', usersController.logout);
+
+router.get('/perfil/:id', usersController.perfil);
+
 module.exports = router;

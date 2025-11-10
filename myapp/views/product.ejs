@@ -47,20 +47,31 @@
 
 					<div class="col-12 col-lg-4">
 						<section class="comments">
-							<% for (let i=0; i < product.comment.length; i++) { %>
-								<article>
-									<img src="/images/users/profile-default.png" alt="">
-									<div class="data">
-										<p class="user">
-											<strong><a href="/users">
-													<%= product.comment[i].user.nombre_usuario %>:
-												</a></strong>
-											<%= product.comment[i].comentario %>
-										</p>
-									</div>
-								</article>
-								<% } %>
+							<h3>Comentarios</h3>
+
+							<% if (product.comment && product.comment.length> 0) { %>
+								<% for (let i=0; i < product.comment.length; i++) { %>
+									<article>
+										<img src="/images/users/profile-default.png"
+											alt="<%= product.comment[i].user.nombre_usuario %>">
+
+										<div class="data">
+											<p class="user">
+												<a href="/users/perfil/<%= product.comment[i].user.id %>">
+													<strong>
+														<%= product.comment[i].user.nombre_usuario %>:
+													</strong>
+												</a>
+												<%= product.comment[i].comentario %>
+											</p>
+										</div>
+									</article>
+									<% } %>
+										<% } else { %>
+											<p>No hay comentarios aún</p>
+											<% } %>
 						</section>
+
 						<form class="form" action="" method="POST">
 							<input class="form-input" type="text" value="" placeholder="Agregar comentario">
 							<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>

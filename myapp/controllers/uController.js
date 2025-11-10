@@ -69,6 +69,37 @@ let uController = {
                 return res.send(error);
             });
     },
+    perfil: function (req, res) {
+        const idUsuario = req.params.id;
+        
+        if (req.session.user == undefined) {
+            return res.redirect("/users/login");
+        }
+
+        db.User.findByPk(idUsuario, {
+            include: [{ association: "products" }]
+        })
+            .then(function (usuario) {
+                if (usuario == undefined) {
+                    return res.redirect("/users/login");
+                }
+
+                let productos = [];
+
+                if (usuario.products && usuario.products.length > 0) {
+                    productos = usuario.products;
+                }
+                return res.render("profile", {
+                    usuario: usuario,
+                    productos: productos,
+                    cantidad: productos.length
+                });
+            })
+            .catch(function (error) {
+                console.log(error);
+                return res.status(500).send(error);
+            });
+    },
 
     logout: function (req, res) {
         req.session.destroy();
