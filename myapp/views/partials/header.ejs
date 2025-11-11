@@ -39,7 +39,7 @@
                 <li>
                     <% if (locals.user != null) { %>
                         <a href="/users/perfil/<%= locals.user.id %>" class="user-link">
-                            <i class="fas fa-user-circle"></i> Mi perfil
+                            <i class="fas fa-user-circle"></i> <%= locals.user.nombre_usuario %>
                         </a>
                     <% } %>
                 </li>
