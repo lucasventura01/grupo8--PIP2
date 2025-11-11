@@ -283,6 +283,13 @@ hr {
   text-align: center;
 }
 
+.container-footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
 .footer-data i {
   color: var(--light-blue);
   font-size: 3.5em;
@@ -492,6 +499,54 @@ textarea.form-input {
 }
 
 
+.formularios{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 0 auto;
+    padding: 50px;
+    margin-top: 20px;
+    box-sizing: content-box;
+}
+
+.formularios label{
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.formularios p{
+    font-size: 15px;
+    color: red;
+    margin-bottom: 10px;
+}
+.formularios div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.formularios input{
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: large;
+}
+
+.cuenta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.cuenta a{
+    text-decoration: none;
+    font-size: 20px;
+}
+.cuenta p{
+    font-size: 20px;
+}
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {
   .main-header_credit-link {

@@ -53,25 +53,25 @@ const productosController = {
         res.render("product-edit", { producto, idProducto: id });
     },
     comentar: function (req, res) {
-        if (!req.session.usuarioLogueado) {
-            return res.redirect('/profile/login');
+        if (req.session.user == undefined) {
+            return res.redirect('/users/login');
         }
 
         const product_id = req.params.idProducto;
-        const user_id = req.session.usuarioLogueado.id;
+        const user_id = req.session.user.id;
         const texto = req.body.comentario;
 
         if (!texto) {
-            return res.redirect(`/products/${product_id}`);
+            return res.redirect(`/productos/${product_id}`);
         }
 
-        db.Comentarios.create({
+        db.Comment.create({
             id_producto: product_id,
             id_usuario: user_id,
             comentario: texto
         })
         .then(function () {
-            res.redirect(`/products/${product_id}`);
+            res.redirect(`/productos/${product_id}`);
         })
         .catch(function (error) {
             console.error('Error al crear el comentario:', error);
