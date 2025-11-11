@@ -193,6 +193,15 @@ hr {
 
 .product-box_image {
   border-bottom: 1px solid var(--light-gray);
+  display: flex;
+  max-width: 250px;
+}
+
+.product-box_image img {
+  display: flex;
+  max-height: 250px;
+  max-width: 250px;
+  padding: 10px;
 }
 
 .product-box_data {
@@ -201,6 +210,7 @@ hr {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 250px;
 }
 
 .product-box_data h2 {
