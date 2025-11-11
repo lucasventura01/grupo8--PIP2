@@ -516,6 +516,22 @@ textarea.form-input {
     text-align: center;
     justify-content: center;
 }
+.formularios select{
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: large;
+}
+.formularios textarea{
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: large;
+    resize: vertical;
+    height: 100px;
+}
 .formularios p{
     font-size: 15px;
     color: red;

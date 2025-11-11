@@ -33,6 +33,7 @@ const productosController = {
             id_usuario: req.session.user.id,
             nombre_producto: req.body.nombre,
             descripcion_producto: req.body.descripcion,
+            nombre_archivo: req.body.imagenUrl,
             //falta ver imagen
         };
         db.Product.create(nuevoProducto)
